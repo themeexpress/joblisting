@@ -1,0 +1,9 @@
+                .login-page,
+            .register-page {
+                background: url('../img/loginbg.jpg')!important;
+            }
+            
+            .login-box,
+            .register-box {
+                width: 360px;
+                margin: 4% auto!important;
