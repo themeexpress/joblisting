@@ -1,9 +1,12 @@
-                .login-page,
-            .register-page {
-                background: url('../img/loginbg.jpg')!important;
-            }
+.login-page,.register-page {
+    background: url('../img/loginbg.png')!important;
+    }
             
-            .login-box,
-            .register-box {
-                width: 360px;
-                margin: 4% auto!important;
+.login-box,.register-box {
+   	width: 360px;
+    margin: 4% auto!important;
+    }
+.login-box-body, .register-box-body {
+    border: 1px solid #f1f1f1;
+    box-shadow: 1px 1px #c1c1c1;
+}

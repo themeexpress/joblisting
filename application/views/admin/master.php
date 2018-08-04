@@ -46,7 +46,7 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <img src="<?php echo base_url()?>/assets/img/emslogosmall.png">
+      <img src="<?php //echo base_url()?>">
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
