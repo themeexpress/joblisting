@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Job Listing | Login</title>
+  <title>Job Listing | Member Login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -71,7 +71,9 @@
         Google+</a>
     </div>
     <!-- /.social-auth-links -->
-    <a href="#">I forgot my password</a><br>    
+
+    <a href="#">I forgot my password</a><br>
+    <a href="<?php echo base_url()?>member-register" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->

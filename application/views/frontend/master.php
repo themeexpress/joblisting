@@ -68,57 +68,24 @@
         <div class="col-lg-9">
 
           <!-- /.card -->
+          <?php foreach($job_details_info as $job_details){?>
           <div class="card card-outline-secondary my-4">
-            <div class="card-header">
-              Job Title  | Company Name
-            </div>
-            <div class="card-body">
-              <p><strong>Vacancy : 02</strong></h4>
-              <h4><u>Job Requirements</u></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, </p>
-              <ul>
-                <li>consectetur adipisicing elit. Omnis</li>
-                <li>sfsconsectfg etur adiptrh isicing elit. </li>
-                <li>fg bfgconsectetur adipisicing elit is</li>
-                <li>dgdconsectetur adipisicing </li>
-                <li>dconsectetur adipisicing elit</li>
-                <li>cdbdfonsectetur adipisicing Omnis</li>
-              </ul>             
-              <hr>              
-              <small class="text-muted">Published Date 3/1/17</small> | <small class="text-muted">Last Date 3/1/17</small>
-              <hr>      
-              <a href="#" class="btn btn-success">Apply Online</a>
-            </div>
-          </div>
-          <!-- /.card -->
 
-          <!-- /.card -->
-          <div class="card card-outline-secondary my-4">
             <div class="card-header">
-              Job Title  | Company Name
+              <span style="color:#06b52d;font-size:28px"><?php echo $job_details->job_name; ?></span> &nbsp; | &nbsp; <span style="color:#007bff;font-size:22px">Company:&nbsp;<?php echo $job_details->company_name; ?></span>
             </div>
             <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>             
+              <p><strong>Vacancy : <?php echo $job_details->vacancy_amount; ?></strong></h4>
+              <h4><u>Job Requirements</u></h4>
+                <?php echo $job_details->job_requirements; ?>          
               <hr>              
-              <small class="text-muted">Published Date 3/1/17</small> | <small class="text-muted">Last Date 3/1/17</small>
+              <small class="text-muted">Published Date <?php echo $job_details->published_date; ?> </small> | 
+              <small class="text-muted">Last <?php echo $job_details->last_date; ?> </small>
               <hr>      
-              <a href="#" class="btn btn-success">Apply Online</a>
+              <a href="<?php echo base_url()?>member-login" class="btn btn-success">Apply Online</a>
             </div>
           </div>
-          <!-- /.card -->
-          <!-- /.card -->
-          <div class="card card-outline-secondary my-4">
-            <div class="card-header">
-              Job Title  | Company Name
-            </div>
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>             
-              <hr>              
-              <small class="text-muted">Published Date 3/1/17</small> | <small class="text-muted">Last Date 3/1/17</small>
-              <hr>      
-              <a href="#" class="btn btn-success">Apply Online</a>
-            </div>
-          </div>
+          <?php } ?>
           <!-- /.card -->
         
         </div>

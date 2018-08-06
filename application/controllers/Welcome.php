@@ -8,6 +8,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('frontend/master');
+		$this->load->model('admin_model');
+		$data=array();
+		$data['job_details_info']=$this->admin_model->job_details_info();
+		$this->load->view('frontend/master',$data);
 	}
 }

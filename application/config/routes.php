@@ -3,22 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.|
-|
-| Please see the user guide for complete details:
-|
-|	https://codeigniter.com/user_guide/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| 
-|my-controller/my-method	-> my_controller/my_method
 */
-//Custom Routers
 
-$route['login-check']='admincontroller/index';
+//Admin Login
+$route['admin-login']='admincontroller/login';
+
+//Member Login
+$route['member-login']='memberController/login';
+$route['member-register']='memberController/register';
+
 
 //default router
 $route['default_controller'] = 'welcome';
