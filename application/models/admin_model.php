@@ -13,7 +13,6 @@ class Admin_model extends CI_model {
    }
 
    public function admin_login_info($user_name,$password){
-
      
     $this->db->select('*');
     $this->db->from('users_info');
@@ -21,10 +20,13 @@ class Admin_model extends CI_model {
     $this->db->where('password',md5($password));
     $this->db->where('user_role',2);
     $query_result=$this->db->get();
-    return $query=$query_result->row();
-    
+    return $query=$query_result->row();    
    
    } 
+   /*Dashboard statistical view*/
+   // public function total_application(){
+   //   $this->db->select("SUM(total) AS MySum");
+   // }
 
 
 	

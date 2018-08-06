@@ -11,6 +11,9 @@ $route['admin-login']='admincontroller/login';
 //Admin login check
 $route['admin-login-check']='admincontroller/admin_login_check';
 
+//Admin Dashboard
+$route['admin-dashboard']='admincontroller/admin_dashboard';
+
 //Member Login
 $route['member-login']='memberController/login';
 $route['member-register']='memberController/register';
