@@ -21,16 +21,32 @@ class Admincontroller extends CI_Controller {
         $sdata=array();
 		if ($query) {
                     $sdata['user_id']=$query->user_id;
-                    $sdata['username']=$query->username;                     
+                    $sdata['user_name']=$query->user_name;                     
                     $testarray =$this->session->set_userdata($sdata);
-                    redirect('/admin_dashboard');
+                    $this->load->view('admin/admin_dashboard');
                     //if not available the redirect with error message
 		}else{
 			$sdata['error_message']='Incorrect Username or Password';
 			$this->session->set_userdata($sdata);			
-			$this->load->view('admin/login/login',$sdata);
+			$this->load->view('admin/login',$sdata);
 		}
     }
+
+     // //Admin Dashboard
+
+    public function admin_dashboard(){
+    	$data= array();
+    	$data['total_application']=$this->admin_model->total_application();
+    	$data['total_job']=$this->admin_model->total_application();
+    	$data['total_applicant']=$this->admin_model->total_application();
+    	$data['admin_header_menu']=$this->load->view();
+    	$data['admin_header_menu']=$this->load->view();
+    	$data['admin_sidemenu']=$this->load->view();
+    	$data['content']=$this->load->view();    	
+    	$this->load->view('admin/admin_dashboard',$data);
+    }
+
+   
 
 	public function index()
 	{
