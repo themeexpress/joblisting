@@ -8,6 +8,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //Admin Login
 $route['admin-login']='admincontroller/login';
 
+//Admin login check
+$route['admin-login-check']='admincontroller/admin_login_check';
+
 //Member Login
 $route['member-login']='memberController/login';
 $route['member-register']='memberController/register';
