@@ -27,14 +27,38 @@
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-dashboard"></i> <span>Job Management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="<?php echo base_url()?>add-job"><i class="fa fa-circle-o"></i> Post a Job</a></li>
+            <li><a href="<?php echo base_url()?>manage-job"><i class="fa fa-circle-o"></i> Manage Jobs</a></li>
+          </ul>
+        </li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Category Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url()?>add-category"><i class="fa fa-circle-o"></i> Add Category</a></li>
+            <li><a href="<?php echo base_url()?>manage-category"><i class="fa fa-circle-o"></i> Manage Category</a></li>
+          </ul>
+        </li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Job Management</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url()?>all-applicant"><i class="fa fa-circle-o"></i> All Applicant</a></li>
+            <li><a href="<?php echo base_url()?>manage-application"><i class="fa fa-circle-o"></i> Manage Application</a></li>
           </ul>
         </li>
         <li class="treeview">

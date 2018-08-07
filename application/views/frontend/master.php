@@ -56,11 +56,10 @@
         <div class="col-lg-3">
           <h1 class="my-4">Job Category</h1>
           <div class="list-group">
-            <a href="#" class="list-group-item active">IT/Programming</a>
-            <a href="#" class="list-group-item">Corporate/Business</a>
-            <a href="#" class="list-group-item">Education/Training</a>
-            <a href="#" class="list-group-item">Corporate/Business</a>
-            <a href="#" class="list-group-item">Education/Training</a>
+            <?php foreach($job_category as $category){?>
+            <a href="#" class="list-group-item"><?php echo $category->category_name; ?></a>
+            <?php } ?>
+           
           </div>
         </div>
         <!-- /.col-lg-3 -->

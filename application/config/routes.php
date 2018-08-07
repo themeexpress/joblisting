@@ -13,6 +13,15 @@ $route['admin-login-check']='admincontroller/admin_login_check';
 
 //Admin Dashboard
 $route['admin-dashboard']='admincontroller/admin_dashboard';
+//JOb area
+$route['add-job']='admincontroller/add_job_form';
+$route['save-job']='admincontroller/save_job';
+$route['manage-job']='admincontroller/manage_job';
+
+//category section
+$route['add-category']='admincontroller/add_category_form';
+$route['save-category']='admincontroller/save_category';
+
 
 //Member Login
 $route['member-login']='memberController/login';

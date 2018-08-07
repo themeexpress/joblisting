@@ -10,6 +10,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->model('admin_model');
 		$data=array();
+		$data['job_category']=$this->admin_model->category_info();
 		$data['job_details_info']=$this->admin_model->job_details_info();
 		$this->load->view('frontend/master',$data);
 	}
