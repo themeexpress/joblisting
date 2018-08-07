@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Register | Member</title>
+  <title>Register | Employee</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -30,29 +30,28 @@
 <body class="hold-transition register-page">
 <div class="register-box">
   <div class="register-logo">
-    <a href="#"><b>Member Login</b></a>
+    <a href="#"><b>Employee Register</b></a>
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Register a new member</p>
+    <p class="login-box-msg">Register a new Employee</p>   
 
-    <form action="../../index.html" method="post">
+    <form action="<?php echo base_url();?>register-new-employee" method="post">      
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="email" class="form-control" name="user_email" placeholder="Email">     
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
+        <?php echo form_error('user_email','<div class="text-danger">','</div>');?>
+      </div>      
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="text" class="form-control" name="user_name" placeholder="User Name">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+        <?php echo form_error('user_name','<div class="text-danger">','</div>');?>
+      </div>       
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password">
-        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-      </div>
+        <?php echo form_error('password','<div class="text-danger">','</div>');?>
+      </div>      
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
@@ -68,15 +67,7 @@
         <!-- /.col -->
       </div>
     </form>
-
-    <!-- <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign up using
-        Google+</a>
-    </div> -->
-    <a href="<?php echo base_url();?>member-login" class="text-center">I already have a membership</a>
+    <a href="<?php echo base_url();?>employee-login" class="text-center">I already have a membership</a>
   </div>
   <!-- /.form-box -->
 </div>

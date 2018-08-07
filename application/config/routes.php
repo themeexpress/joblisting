@@ -23,9 +23,13 @@ $route['add-category']='admincontroller/add_category_form';
 $route['save-category']='admincontroller/save_category';
 
 
-//Member Login
-$route['member-login']='memberController/login';
-$route['member-register']='memberController/register';
+//Employee
+$route['employee-login']='employeeController/login';
+$route['employee-register']='employeeController/register';
+$route['register-new-employee']='employeeController/register_employee';
+
+//Employer Login
+$route['employer-login']='employerController/employer_login';
 
 
 //default router

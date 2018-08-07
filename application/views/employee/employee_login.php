@@ -73,7 +73,7 @@
     <!-- /.social-auth-links -->
 
     <a href="#">I forgot my password</a><br>
-    <a href="<?php echo base_url()?>member-register" class="text-center">Register a new membership</a>
+    <a href="<?php echo base_url()?>employee-register" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->
