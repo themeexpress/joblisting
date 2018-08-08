@@ -26,7 +26,9 @@ $route['save-category']='admincontroller/save_category';
 //Employee
 $route['employee-login']='employeeController/login';
 $route['employee-register']='employeeController/register';
-$route['register-new-employee']='employeeController/register_employee';
+$route['save-employee']='employeeController/save_employee_info';
+$route['employee-dashboard']='employeeController/employee_dashboard';
+$route['emp-logout']='employeeController/emloyee_logout';
 
 //Employer Login
 $route['employer-login']='employerController/employer_login';

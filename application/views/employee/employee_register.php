@@ -36,7 +36,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register a new Employee</p>   
 
-    <form action="<?php echo base_url();?>register-new-employee" method="post">      
+    <form action="<?php echo base_url();?>save-employee" method="post">      
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="user_email" placeholder="Email">     
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
