@@ -41,7 +41,7 @@
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="user_email" placeholder="Email">     
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-        <?php echo form_error('user_email');?>
+        <?php echo form_error('user_email','<div class="text-danger">','</div>');?>
       </div>      
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="user_name" placeholder="User Name">

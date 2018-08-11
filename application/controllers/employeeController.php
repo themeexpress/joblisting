@@ -6,10 +6,30 @@ class EmployeeController extends CI_Controller {
         parent::__construct();
         $this->load->model('employeeModel');
         } 
-
+    //Employee login form
 	public function login()
 	{
 		$this->load->view('employee/employee_login');
+	}
+
+	//login process
+	public function employee_login_info(){
+		$user_email =$this->input->post('user_email',TRUE);
+        $password=$this->input->post('password',TRUE);       
+        $query=$this->employeeModel->check_employee_login($user_email,$password);       
+        $sdata=array();
+		if ($query) {
+                    $sdata['user_id']=$query->user_id;
+                    $sdata['user_name']=$query->user_name;                     
+                    $testarray =$this->session->set_userdata($sdata);
+                    redirect('/employee-dashboard');
+                    //if not available the redirect with error message
+		}else{
+			$sdata['error_message']='Incorrect Username or Password';
+			$this->session->set_userdata($sdata);			
+			$this->load->view('employee/employee_login',$sdata);
+		}
+
 	}
 
 	//Employee Register
@@ -27,7 +47,7 @@ class EmployeeController extends CI_Controller {
 	//Register New Employee
 	public function save_employee_info(){		
 		//$this->load->library('form_validation');
-		$this->form_validation->set_rules('user_email','User Email','required');
+		$this->form_validation->set_rules('user_email','User Email','required|is_unique[users_info.user_email]');
 		$this->form_validation->set_rules('user_name','User Name','required');
 		$this->form_validation->set_rules('password', 'Password','required');
 		if($this->form_validation->run()==true){			

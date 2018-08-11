@@ -24,10 +24,17 @@ $route['save-category']='admincontroller/save_category';
 
 
 //Employee
+//login from
 $route['employee-login']='employeeController/login';
+//login function
+$route['empployee-auth']='employeeController/employee_login_info';
+//register from
 $route['employee-register']='employeeController/register';
+//registration function
 $route['save-employee']='employeeController/save_employee_info';
+//employee dashboard
 $route['employee-dashboard']='employeeController/employee_dashboard';
+//employee logout
 $route['emp-logout']='employeeController/emloyee_logout';
 
 //Employer Login
