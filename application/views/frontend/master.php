@@ -44,7 +44,7 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url()?>employer-login">Post JOb</a>
+              <a class="nav-link" style="background: #FEB651;color: #000;font-weight: 600;border-radius: 22px;padding: 6px 18px;" href="<?php echo base_url()?>employer-login">Post Job</a>
             </li>
           </ul>
         </div>

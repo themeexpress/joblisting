@@ -34,13 +34,14 @@
   </div>
 
   <div class="register-box-body">
-    <p class="login-box-msg">Register a new Employee</p>   
+    <p class="login-box-msg">Register a new Employee</p> 
+    <?php //echo validation_errors(); ?> 
 
     <form action="<?php echo base_url();?>save-employee" method="post">      
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="user_email" placeholder="Email">     
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-        <?php echo form_error('user_email','<div class="text-danger">','</div>');?>
+        <?php echo form_error('user_email');?>
       </div>      
       <div class="form-group has-feedback">
         <input type="text" class="form-control" name="user_name" placeholder="User Name">

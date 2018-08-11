@@ -24,16 +24,14 @@ class EmployeeController extends CI_Controller {
     	$data['admin_dashboard_content']=$this->load->view('employee/includes/employee_dashboard_content.php','',true); 
 		$this->load->view('employee/employee_dashboard',$data);
 	}
-
 	//Register New Employee
-
 	public function save_employee_info(){		
-		$this->load->library('form_validation');
+		//$this->load->library('form_validation');
 		$this->form_validation->set_rules('user_email','User Email','required');
 		$this->form_validation->set_rules('user_name','User Name','required');
 		$this->form_validation->set_rules('password', 'Password','required');
-		if($this->form_validation->run()){			
-		$this->load->model('employeeModel');
+		if($this->form_validation->run()==true){			
+		//$this->load->model('employeeModel');
 		$data = array(
 			'user_email'=>$this->input->post('user_email',TRUE),
 			'user_name'=>$this->input->post('user_name',TRUE),
@@ -43,11 +41,12 @@ class EmployeeController extends CI_Controller {
 		$this->employeeModel->save_employee_info($data);
 		redirect('employee-dashboard');
 	}
-	else{
-		redirect('employee-register');
+	else{		
+		$this->load->view('employee/employee_register');
 	}
 
 	}
+
 	public function emloyee_logout(){
 		redirect('/');
 	}
