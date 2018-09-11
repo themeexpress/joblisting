@@ -25,7 +25,7 @@ $route['save-category']='admincontroller/save_category';
 
 //Employee
 //login from
-$route['employee-login']='employeeController/login';
+$route['employee-login/(.+)']='employeeController/login/$1';
 //login function
 $route['empployee-auth']='employeeController/employee_login_info';
 //register from

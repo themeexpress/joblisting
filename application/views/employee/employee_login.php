@@ -30,9 +30,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
+<?php echo $job_id;?>
 <div class="login-box">
   <div class="login-logo">
     <a href="#"><h1> Job Listing</h1></a>
+    
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -47,7 +49,9 @@
 
     <form action="<?php echo base_url()?>empployee-auth" method="post">
       <div class="form-group has-feedback">
+        <input type='hidden' name='job_id' value="<?php echo $job_id;?>">
         <input type="email" class="form-control" placeholder="Email" name="user_email">
+        
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

@@ -7,13 +7,16 @@ class EmployeeController extends CI_Controller {
         $this->load->model('employeeModel');
         } 
     //Employee login form
-	public function login()
-	{
-		$this->load->view('employee/employee_login');
+	public function login($job_id)
+	{   
+		$data=array();
+		$data['job_id']=$job_id;
+		$this->load->view('employee/employee_login',$data);
 	}
 
 	//login process
 	public function employee_login_info(){
+		$job_id=$this->input->post('job_id',true);
 		$user_email =$this->input->post('user_email',TRUE);
         $password=$this->input->post('password',TRUE);       
         $query=$this->employeeModel->check_employee_login($user_email,$password);       

@@ -84,7 +84,7 @@
               <small class="text-muted">Published Date <?php echo $job_details->published_date; ?> </small> | 
               <small class="text-muted">Last <?php echo $job_details->last_date; ?> </small>
               <hr>      
-              <a href="<?php echo base_url()?>employee-login" class="btn btn-success">Apply Online</a>
+              <a href="<?php echo base_url()?>employee-login/<?php echo $job_details->job_id; ?>" class="btn btn-success">Apply Online</a>
             </div>
           </div>
           <?php } ?>
