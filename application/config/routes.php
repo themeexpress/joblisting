@@ -37,8 +37,13 @@ $route['employee-dashboard']='employeeController/employee_dashboard';
 //employee logout
 $route['emp-logout']='employeeController/emloyee_logout';
 
+//------Employer Route-------//
 //Employer Login
 $route['employer-login']='employerController/employer_login';
+//employer login funtion
+$route['employer-auth']='employerController/employer_login_info';
+//Employer dashboard
+$route['employer-dashboard']='employerController/employer_dashboard';
 
 
 //default router
